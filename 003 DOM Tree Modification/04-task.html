@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.4_JavaScript-advanced_aldushyna -->    
 
 <head>
     <meta charset="UTF-8">
@@ -61,7 +62,26 @@
             }
         ];
 
+         // DZ_2_task_2.4_JavaScript-advanced_aldushyna
+
+        let table = document.createElement("table");
+        let body = document.querySelector("body");
+        body.append(table);
+
+        for( const sourceElement of source){
+            let tr = document.createElement("tr");
+            table.append(tr);
+
+            let td1 = document.createElement("td");
+            td1.textContent = sourceElement.month;
+            tr.append(td1);
+
+            let td2 = document.createElement("td");
+            td2.textContent = sourceElement.amount;
+            tr.append(td2);
+
+        }
+
     </script>
 </body>
-
 </html>
