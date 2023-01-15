@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.5_JavaScript-advanced_aldushyna -->    
 
 <head>
     <meta charset="UTF-8">
@@ -496,11 +497,16 @@
             return div;
         }
         
+        // DZ_2_task_2.5_JavaScript-advanced_aldushyna
+
         users.forEach(user => {
             let card = createUserCard(user);
+            if (user.friends.length < 5){
+                card.style.border = "2px solid red";
+            }
             document.body.append(card);
         });
+
     </script>
 </body>
-
 </html>
