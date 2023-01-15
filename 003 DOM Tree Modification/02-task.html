@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.2_JavaScript-advanced_aldushyna -->     
 
 <head>
     <meta charset="UTF-8">
@@ -15,10 +16,10 @@
 
 <body>
     Рабочие дни
-    <div></div>
+    <div id="output1"></div><br><br>
 
     Выходные дни
-    <div></div>
+    <div id="output2"></div>
 
     <script>
        /*
@@ -29,6 +30,8 @@
         Параграфы создавайте с помощью перебора массива days. В параграф помещайте значение свойства name.
         */
 
+        // DZ_2_task_2.2_JavaScript-advanced_aldushyna
+
         let days = [{ name: "Sunday", isWorkDay: false },
         { name: "Monday", isWorkDay: true },
         { name: "Tuesday", isWorkDay: true },
@@ -36,7 +39,27 @@
         { name: "Thursday", isWorkDay: true },
         { name: "Friday", isWorkDay: true },
         { name: "Saturday", isWorkDay: false }];
+
+
+        let divOutput1 = document.querySelector("#output1");
+        let divOutput2 = document.querySelector("#output2");
+
+
+        for (const day of days){
+            let pElement = document.createElement("p");
+            let pText = document.createTextNode(day.name);
+
+                if (day.isWorkDay == true){
+                    pElement.append(pText);
+                    divOutput1.append(pElement);
+
+                }else if(day.isWorkDay == false){
+                    pElement.append(pText);
+                    divOutput2.append(pElement);
+
+                }
+        }
+
     </script>
 </body>
-
 </html>

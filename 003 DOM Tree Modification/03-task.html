@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ <!-- DZ_2_task_2.3_JavaScript-advanced_aldushyna -->   
 
 <head>
     <meta charset="UTF-8">
@@ -62,7 +63,25 @@
         (В прошлом уроке были рассмотрены примеры, показывающие как получить доступ к родительским элементам, так как 
         удалять нужно не ячейку td, в которой находится значение, а строку tr, в которой расположена эта ячейка).
         */
+
+        // DZ_2_task_2.3_JavaScript-advanced_aldushyna
+
+        //let table = document.querySelectorAll("#statsTable td:nth-child(2)");
+        let table = document.querySelector("#statsTable");
+        let rows2delete = [];
+        for (const row of table.rows){
+            console.log(row.cells[0].innerText);
+            console.log(row.cells[1].innerText);
+            
+            if (row.cells[1].innerText < 100){
+                rows2delete.push(row)
+            } 
+        }
+        
+        for (const row of rows2delete){
+            row.remove();
+        }
+
     </script>
 </body>
-
 </html>
