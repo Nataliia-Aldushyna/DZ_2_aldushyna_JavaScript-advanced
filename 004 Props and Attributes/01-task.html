@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.1_JavaScript-advanced_aldushyna --> 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +18,16 @@
         Задание:
         Напишите сценарий, который поменяет цвет текста элементов div, на тот, который указан в качестве значения атрибута data-color
         */
+
+        // DZ_2_task_2.1_JavaScript-advanced_aldushyna
+
+        let divElem = document.querySelectorAll("div");        
+       
+        for (const element of divElem){
+            console.log(element.dataset.color);
+            element.style.color = element.dataset.color;
+        }
+
     </script>
 </body>
 </html>

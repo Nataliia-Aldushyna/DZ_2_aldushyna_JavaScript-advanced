@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.4_JavaScript-advanced_aldushyna -->    
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 04</title>
+   
+   <!-- <style>
+
+    .task[data-status="completed"] {
+        border: 1px solid green;
+    }
+    .task[data-status="expired"] {
+        border: 1px solid red;
+    }
+
+    </style> -->
 </head>
 
 <body>
     <div class="task" data-status="completed">
         Купить молоко
-    </div>
+    </div><br>
 
     <div class="task" data-status="expired">
         Выгулять собаку
-    </div>
+    </div><br>
 
     <div class="task">
         Выучить JavaScript
-    </div>
+    </div><br>
 
     <div class="task">
         Спасти мир
-    </div>
+    </div><br>
 
     <script>
         /*
         Задание:
         Для элементов с атрибутом data-status="expired" сделайте рамку красного цвета. Для элементов с атрибутом data-status="completed" выведите рамку зеленого цвета.
         */
+
+        // DZ_2_task_2.4_JavaScript-advanced_aldushyna
+
+        document.querySelectorAll('[data-status]').forEach((divElem) => {
+            if (divElem.dataset.status == "completed"){
+                divElem.style.border = "2px solid green";
+            }
+            else if (divElem.dataset.status == "expired"){
+                divElem.style.border = "2px solid red";
+            }
+        });
+        
+        // console.log(document.querySelectorAll("[data-status]"));
+
     </script>
 </body>
 

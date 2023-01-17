@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_2.2_JavaScript-advanced_aldushyna -->
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +24,27 @@
         Задание:
         Посчитайте сумму значений атрибутов data-value и my-attribute всех элементов на текущей странице и отобразите ее пользователю.
         */
+
+        // DZ_2_task_2.2_JavaScript-advanced_aldushyna
+
+        let divElem = document.querySelector("div");
+        let myAttributeSum = 0;
+        let valueSum = 0
+
+        document.querySelectorAll('[data-value]').forEach((divElem) => {valueSum += +divElem.dataset.value;});
+        // let values = document.querySelectorAll('[data-value]');
+        // for (const v of values){
+        //     valueSum += +v.dataset.value;
+        // }
+        console.log(valueSum);
+
+        // document.querySelectorAll('[my-attribute]').forEach((divElem) => {myAttributeSum += +divElem.dataset.myAttribute;});
+        let attributes = document.querySelectorAll('[my-attribute]');
+        for (const a of attributes){
+            myAttributeSum += +a.getAttribute("my-attribute")
+        }
+        console.log(myAttributeSum);
+
     </script>
 </body>
 

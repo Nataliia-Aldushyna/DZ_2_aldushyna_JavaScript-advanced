@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- DZ_2_task_3.3_JavaScript-advanced_aldushyna -->    
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +24,9 @@
 </head>
 
 <body>
+    <div id="output">
+
+    </div>
     <script>
         /*
         Задание:
@@ -33,8 +37,33 @@
         Разместите все созданные в конец тела документа.
         */
 
+        // DZ_2_task_3.3_JavaScript-advanced_aldushyna
+
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let busyDays = ["Monday", "Thursday", "Friday"];
+
+        let divElement = document.createElement("div");
+        let divOutput = document.querySelector("#output");
+
+
+        for (const day of days){
+            let pElement = document.createElement("p");
+            let pText = document.createTextNode(day);
+            // console.log(pElement);
+            // console.log(pText);
+            pElement.append(pText);
+            divOutput.append(pElement);
+
+            for (const busy of busyDays){
+                let bText = document.createTextNode(busy);
+                // console.log(bText);
+                
+                if(pText == bText){
+                    divElement.classList.add("busy-day");
+                }
+
+            }
+        }
 
     </script>
 </body>
